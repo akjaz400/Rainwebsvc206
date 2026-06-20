@@ -4,7 +4,7 @@ import requests
 app = FastAPI(title="City Temperature Web Service")
 
 @app.get("/weather")
-def get_temperature(Pune: str):
+def get_temperature(city: pune):
     """
     Fetches the current temperature for a given city name.
     """
