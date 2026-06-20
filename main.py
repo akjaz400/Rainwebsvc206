@@ -3,15 +3,6 @@ import requests
 
 app = FastAPI(title="City Temperature Web Service")
 
-@app.get("/")
-def home():
-    return {
-        "status": "online",
-        "message": "Welcome to the Temperature API. Use /weather?city=YourCity to check the weather.",
-        "documentation": "/docs"
-    }
-
-
 @app.get("/weather")
 def get_temperature(city: str):
     """
